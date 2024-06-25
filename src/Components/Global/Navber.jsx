@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import css from '../../app/globals.css'
 import Image from 'next/image'
-
+import { signIn, signOut, useSession } from 'next-auth/react';
+import NabButton from './NabButton';
 export default function Navber() {
     const menuitem = <>
         <Link href='/'>Home</Link>
@@ -44,6 +44,7 @@ export default function Navber() {
             </div>
             <div className="navbar-end">
                 <a className="btn btn-outline  border-primary hover:bg-none">Appointment</a>
+                <NabButton></NabButton>
             </div>
         </div>
     )
